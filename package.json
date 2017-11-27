@@ -1,0 +1,22 @@
+{
+  "name": "map",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "browserify ./public/js/main.js -o ./public/js/bundle.js & node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.1",
+    "mapbox-gl": "^0.40.1",
+    "pg": "^7.3.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  }
+}

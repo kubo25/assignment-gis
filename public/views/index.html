@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>Kyoto Tourism</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.css' rel='stylesheet' />
+    <link href="style/main.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="menu">     
+        <div class="circle" id="openMenu">
+            <div id="menuButtons">
+                <div id="searchMenuButton" class="circle"><img src="assets/search.svg" /></div>
+                <div id="nearbyMenuButton" class="circle"><img src="assets/nearby.png" /></div>
+                <div id="betweenMenuButton" class="circle"><img src="assets/between.png" /></div>
+                <div id="removeMenuButton" class="circle"><img src="assets/remove.png" /></div>
+            </div>
+        </div> 
+        <div id="searchMenuWrapper" class="menuContentWrapper">
+            <form class="menuForm" id="search">
+                <div class="menuWrapper">
+                    <input class="menuInput" id="searchBox" type="text" placeholder="Search..."/>
+                    <div class="menuInputButton" id="searchButton"><img src="assets/search.svg" /></div>
+                </div>
+                <div class="suggestions">
+                    <ul class="suggestionList" id="searchSuggestionList"></ul>
+                </div>
+            </form>
+        </div>
+        <div id="nearbyMenuWrapper" class="menuContentWrapper">
+            <form class="menuForm" id="nearby">
+                <div class="menuWrapper">
+                    <input class="menuInput" id="nearbyBox" type="text" placeholder="Search..."/>
+                    <input class="menuInput" id="nearbyDistance" type="number" value="100" min="20" max="1000"/>
+                    <div class="menuInputButton" id="nearbyButton"><img src="assets/search.svg" /></div>
+                </div>
+                <div class="suggestions">
+                    <ul class="suggestionList" id="nearbySuggestionList"></ul>
+                </div>
+            </form>
+        </div>
+        <div id="betweenMenuWrapper" class="menuContentWrapper">
+            <form class="menuForm" id="betweenStartForm">
+                <div class="menuWrapper">
+                    <input class="menuInput" id="betweenStartBox" type="text" placeholder="Search..."/>
+                </div>
+                <div class="suggestions">
+                    <ul class="suggestionList" id="betweenStartSuggestionList"></ul>
+                </div>                    
+            </form>
+            <form class="menuForm" id="betweenEndForm">
+                <div class="menuWrapper">
+                    <input class="menuInput" id="betweenEndBox" type="text" placeholder="Search..."/>
+                </div>
+                <div class="suggestions">
+                        <ul class="suggestionList" id="betweenEndSuggestionList"></ul>
+                </div>   
+            </form>
+            <form class="menuForm">
+                <div class="menuWrapper">
+                    <input class="menuInput" type="number" id="betweenDistance" min="20" max="500" />
+                    <div class="menuInputButton" id="betweenButton"><img src="assets/search.svg" /></div>    
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="map"></div>
+    <script src="../js/bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;    
+}
+
+div#map{
+    height: 100vh;
+    width: 100vw;
+}
+
+div#menu{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 999;  
+}
+
+div.circle{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    height: 50px;
+    width: 50px;
+    background-color: #03A9F4;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+div#openMenu:before{
+    content: " ";
+    position: absolute;
+    display: block;
+    background-color: #ffffff;
+    width: 6px;
+    margin-left: -3px;
+    left: 50%;
+    top: 10px;
+    bottom: 10px;
+    z-index: 9;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+div#openMenu:after{
+    content: " ";
+    position: absolute;
+    display: block;
+    background-color: #ffffff;
+    height: 6px;
+    margin-top: -3px;
+    top: 50%;
+    left: 10px;
+    right: 10px;
+    z-index: 9;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+div#openMenu{
+    z-index: 999;
+}
+
+div.open#openMenu:after, div.open#openMenu:before{
+    transform: rotate(135deg);
+}
+
+div#menuButtons{
+    width: 250px;
+    opacity: 0;
+    transform: translate(60px, -100%);
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+
+}
+
+div#menuButtons.open{
+    opacity: 1;
+    transform: translateX(60px);
+}
+
+.circle img{
+    display: block;
+    height: 25px;
+    margin: 12px auto;
+    filter: invert(100%);
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.menuContentWrapper, div.circle{
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2),0 -1px 0px rgba(0,0,0,0.02);            
+}
+
+div.menuContentWrapper{
+    position: absolute;
+    min-width: 320px;
+    background-color: #ffffff;
+    transform: translateY(-100%);
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+div.open.menuContentWrapper{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+form.menuForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+    padding: 10px 20px;
+    margin: 0
+}
+
+div.menuWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+div.menuInputButton{
+    position: relative;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.menuInputButton img{
+    position: absolute;
+    width: 20px;
+    top: 2px;
+}
+
+input.menuInput{
+    display: inline-block;
+    flex-grow: 1;
+    height: 1.3em;
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+}
+
+div.suggestions{
+    margin-top: 5px;
+    background-color: #03A9F4;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2),0 -1px 0px rgba(0,0,0,0.02);    
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;            
+}
+
+.suggestions ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.suggestions ul li{
+    color: #ffffff;
+    height: 40px;
+    border-bottom: 2px solid #ffffff;
+    cursor: pointer;
+}
+
+.suggestions ul li:last-of-type{
+    border: none;
+}
+
+.suggestions ul li:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.suggestions ul li span{
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 10px;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.marker{
+    background-image: url("../assets/marker.png");
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.mapboxgl-popup-content h3{
+    text-align: center;
+}
+
+.mapboxgl-popup-content ul{
+    padding-left: 20px;
+    margin: 0;
+}
+
+#nearbyBox{
+    margin-right: 10px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#nearbyDistance{
+    width: 4em;
+    text-align: center;
+    margin-right: 10px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#betweenDistance{
+    padding-right: 10px;
+}

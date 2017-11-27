@@ -18,10 +18,8 @@ Build a map-based application, which lets the user see geo-based data on a map a
 
 ## My project
 
-Fill in (either in English, or in Slovak):
+**Application description**: Application for locating spots interesting for tourists in Kyoto.
 
-**Application description**: `<fill in>`
+**Data source**: [Open Street Maps](https://www.openstreetmap.org/)
 
-**Data source**: `<fill in>`
-
-**Technologies used**: `<fill in>`
+**Technologies used**: `ExpressJS`, `MapBox`, `PostGIS`, `pgRouting`
